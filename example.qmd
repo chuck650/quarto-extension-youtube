@@ -1,0 +1,34 @@
+---
+title: "Embedding YouTube Videos"
+subtitle: "A Simple Example"
+format: html
+videos:
+  - title: Quarto Crash Course
+    url: https://www.youtube.com/watch?v=_VKxTPWDhA4
+    author: Posit PBC
+    channel: https://www.youtube.com/@PositPBC
+    video_id: _VKxTPWDhA4
+    description: Create Professional Reports, Dashboards & Websites w/ Markdown & Python Code!
+---
+
+<!-- ::: {style="width: 30%; margin: auto; text-align: center;"}
+![YouTube Logo](https://simpleicons.org/icons/youtube.svg)
+::: -->
+
+Embed YouTube videos in your Quarto documents using the metadata visible to the document. 
+
+<!-- ## Embedding a YouTube Video -->
+<h2 style="display: flex; align-items: center;">
+  <img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube Logo" style="height: 1em; margin-right: 0.5em;">
+  Embedding a YouTube Video
+</h2>
+
+Embed a video like this.
+
+<code>
+ &lcub;{< youtube_video _VKxTPWDhA4 >}}
+</code>
+
+On rendering, the result looks like this:
+
+{{< youtube_video _VKxTPWDhA4 >}}
