@@ -3,7 +3,7 @@
 A Quarto extension for embedding YouTube videos in your documents.
 
 [![Quarto Extension](https://img.shields.io/badge/Quarto-Extension-blue.svg)](https://quarto.org/docs/extensions/)
-[![GitHub license](https://img.shields.io/github/license/quarto-extensions/youtube-video?color=blue)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/chuck650/quarto-extension-youtube/blob/main/LICENSE)
 
 ---
 
