@@ -13,7 +13,7 @@ A Quarto extension for embedding YouTube videos in your documents.
 Install the extension by running the following command in your project's terminal:
 
 ```bash
-quarto install extension chuck650/quarto-extensions-youtube
+quarto install extension chuck650/quarto-extension-youtube
 ```
 
 ---
