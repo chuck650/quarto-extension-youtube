@@ -6,6 +6,7 @@
 .quarto/
 .ipynb_checkpoints/
 .DS_Store
+/example.html
 
 # ------------------------------------
 # 2. General Git/System Files

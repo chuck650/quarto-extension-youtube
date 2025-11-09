@@ -41,10 +41,6 @@ videos:
 
 Embed a video like this:
 
-`{{< youtube_video _VKxTPWDhA4 >}}`
-
-On rendering, the result looks like this:
-
 {{< youtube_video _VKxTPWDhA4 >}}
 ```
 
