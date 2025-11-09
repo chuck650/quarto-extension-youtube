@@ -1,9 +1,9 @@
-# 📦 My Awesome Quarto Extension
+# Quarto YouTube Video Extension
 
-A Quarto extension for [briefly describe the main function, e.g., "creating custom LaTeX environments" or "adding interactive maps"]. This extension helps you [mention a key benefit, e.g., "maintain brand consistency" or "embed interactive components"].
+A Quarto extension for embedding YouTube videos in your documents.
 
-[![Quarto Extension](https://img.shields.io/badge/Quarto-Extension-blue.svg)]([https://quarto.org/docs/extensions/](https://quarto.org/docs/extensions/))
-[![GitHub license](https://img.shields.io/github/license/YOUR-ORG/YOUR-REPO?color=blue)](LICENSE)
+[![Quarto Extension](https://img.shields.io/badge/Quarto-Extension-blue.svg)](https://quarto.org/docs/extensions/)
+[![GitHub license](https://img.shields.io/github/license/quarto-extensions/youtube-video?color=blue)](LICENSE)
 
 ---
 
@@ -12,62 +12,40 @@ A Quarto extension for [briefly describe the main function, e.g., "creating cust
 Install the extension by running the following command in your project's terminal:
 
 ```bash
-quarto install extension YOUR-ORG/YOUR-REPO
-```
-
-For example, if your GitHub username is `johndoe` and the repository is `fancy-shortcodes`, the command would be:
-
-```bash
-quarto install extension johndoe/fancy-shortcodes
+quarto install extension chuck650/quarto-extensions-youtube
 ```
 
 ---
 
 ## 🛠️ Usage
 
-Once installed, you can use the extension in any Quarto document (`.qmd`) by adding the extension's name (which corresponds to the folder name inside `_extensions/`) to the appropriate YAML key.
+To embed a YouTube video, first add video metadata to your document's YAML front matter. Then, use the `youtube_video` shortcode to embed the video.
 
-### Configuration
+### Example
 
-Add the extension to your YAML front matter. If it's a filter or shortcode extension, use the `filters` key:
+**Input (`.qmd`):**
 
 ```yaml
 ---
 title: "My Document"
 format: html
-filters:
-  - my-awesome-extension # Replace with your actual extension folder name
----
-```
-
-### Demonstration
-
-Here is how to invoke the core functionality of the extension in your document:
-
-**Input (`.qmd`):**
-
-```markdown
-::alert-box[
-This is an important note displayed using the extension's custom div.
-]
-```
-
-**Output (Expected Result):**
-
-> The content will render as a prominent, styled callout box, demonstrating the successful application of the extension's CSS and/or Lua filter logic.
-
+videos:
+  - title: Quarto Crash Course
+    url: https://www.youtube.com/watch?v=_VKxTPWDhA4
+    author: Posit PBC
+    channel: https://www.youtube.com/@PositPBC
+    video_id: _VKxTPWDhA4
+    description: Create Professional Reports, Dashboards & Websites w/ Markdown & Python Code!
 ---
 
-## ⚙️ Options
+Embed a video like this:
 
-If your extension supports configuration, document them here. If not, you can remove this section.
+`{{< youtube_video _VKxTPWDhA4 >}}`
 
-This extension supports the following document options, which can be set in the YAML front matter:
+On rendering, the result looks like this:
 
-| Option         | Type    | Default     | Description                                      |
-|:-------------- |:------- |:----------- |:------------------------------------------------ |
-| `alert-color`  | string  | `"#E74C3C"` | The background color used for the alert box.     |
-| `alert-shadow` | boolean | `true`      | Set to `false` to remove the drop shadow effect. |
+{{< youtube_video _VKxTPWDhA4 >}}
+```
 
 ---
 
