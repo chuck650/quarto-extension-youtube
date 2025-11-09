@@ -1,0 +1,27 @@
+name: Render and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render example
+        run: quarto render example.qmd
+
+      - name: Check for output
+        run: |
+          if [ ! -f "example.html" ]; then
+            echo "::error::Output file example.html not found."
+            exit 1
+          fi
