@@ -3,8 +3,12 @@ name: Render and Test
 on:
   push:
     branches: [ main ]
+    paths:
+      - '_extensions/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - '_extensions/**'
 
 jobs:
   render:
